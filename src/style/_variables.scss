@@ -1,0 +1,159 @@
+// ============================================
+// 🎭 PREMIUM DESIGN SYSTEM VARIABLES
+// ============================================
+
+// 1. BRAND CORE
+$brand-orange: #F36F21;
+$brand-purple: #5E35B1;
+$brand-navy: #050811;
+
+// 2. DESIGN SYSTEM SURFACES (Defined early to avoid 'undefined' errors)
+$dark-surface: #0a0f1d;
+$dark-card: rgba(15, 23, 42, 0.6);
+$dark-surface-light: #161e2b;
+
+// 3. CORE SPECTRE REQUIREMENTS
+$version: "3.0.0-BESPOKE";
+$rtl: false;
+
+// Typography Stacks
+$font-heading: 'Outfit', sans-serif;
+$font-body: 'Inter', sans-serif;
+$base-font-family: $font-body;
+$body-font-family: $font-body, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+$mono-font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$fallback-font-family: "Helvetica Neue", sans-serif;
+
+// CJK Font Families
+$cjk-zh-hans-font-family: $base-font-family, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", $fallback-font-family;
+$cjk-zh-hant-font-family: $base-font-family, "PingFang TC", "Hiragino Sans CNS", "Microsoft JhengHei", $fallback-font-family;
+$cjk-jp-font-family: $base-font-family, "Hiragino Sans", "Hiragino Kaku Gothic Pro", "Yu Gothic", YuGothic, Meiryo, $fallback-font-family;
+$cjk-ko-font-family: $base-font-family, "Malgun Gothic", $fallback-font-family;
+
+// Color System
+$primary-color: $brand-orange;
+$primary-color-dark: #da631e;
+$primary-color-light: #f58c4d;
+$secondary-color: $brand-purple;
+$secondary-color-dark: #542f9f;
+$secondary-color-light: #8e6ed1;
+
+// Backgrounds
+$dark-bg: #020408;
+$light-bg: #FFFFFF;
+$bg-color: $dark-bg;
+$bg-color-dark: $dark-bg;
+$bg-color-light: #0f172a; // Use a dark surface instead of white for Spectre components
+$body-bg: $dark-bg;
+$body-font-color: #F8FAFC;
+
+// Status Colors
+$success-color: #10B981;
+$warning-color: #F59E0B;
+$error-color: #EF4444;
+$info-color: #3B82F6;
+$gray-color: #94A3B8;
+$gray-color-light: #E2E8F0;
+$gray-color-dark: #334155;
+$light-color: #FFFFFF;
+$dark-color: #0F172A;
+
+// Readability Helper Variables
+$title-text: #FFFFFF;
+$body-text-dim: #94A3B8;
+$label-text: #CBD5E1;
+
+// Borders & Sizing
+$border-width: 0.0625rem;
+$border-width-lg: 0.1rem;
+$border-color: rgba(255, 255, 255, 0.08);
+$border-color-dark: rgba(0, 0, 0, 0.2);
+$border-color-light: rgba(255, 255, 255, 0.1);
+$border-radius: 1rem;
+$border-radius-sm: 0.5rem;
+$border-radius-lg: 1.5rem;
+$border-radius-xl: 2rem;
+$border-radius-full: 9999px;
+
+// Unit System
+$unit-o: 0.05rem;
+$unit-h: 0.1rem;
+$unit-1: 0.25rem;
+$unit-2: 0.5rem;
+$unit-3: 0.75rem;
+$unit-4: 1rem;
+$unit-5: 1.25rem;
+$unit-6: 1.5rem;
+$unit-7: 1.75rem;
+$unit-8: 2rem;
+$unit-9: 2.25rem;
+$unit-10: 2.5rem;
+$unit-11: 2.75rem;
+$unit-12: 3rem;
+$unit-16: 4rem;
+
+// Layout System
+$html-font-size: 16px;
+$html-line-height: 1.5;
+$font-size: 0.8rem;
+$font-size-sm: 0.7rem;
+$font-size-lg: 0.9rem;
+$line-height: 1.2rem;
+
+$layout-spacing: 0.5rem;
+$layout-spacing-sm: 0.25rem;
+$layout-spacing-lg: 1rem;
+$grid-spacing: 0.75rem;
+
+$size-xs: 480px;
+$size-sm: 640px;
+$size-md: 768px;
+$size-lg: 1024px;
+$size-xl: 1280px;
+$size-2x: 1536px;
+
+// Controls
+$control-size: 2.25rem;
+$control-size-sm: 1.75rem;
+$control-size-lg: 2.75rem;
+$control-padding-x: 0.5rem;
+$control-padding-x-sm: 0.5rem;
+$control-padding-x-lg: 0.5rem;
+$control-padding-y: 0.4625rem;
+$control-padding-y-sm: 0.2125rem;
+$control-padding-y-lg: 0.7125rem;
+$control-icon-size: 0.8rem;
+$control-width-xs: 180px;
+$control-width-sm: 320px;
+$control-width-md: 480px;
+$control-width-lg: 640px;
+$control-width-xl: 960px;
+
+// Shadows & Animations
+$shadow-glow: 0 0 25px rgba(243, 111, 33, 0.35);
+$shadow-glow-purple: 0 0 25px rgba(94, 53, 177, 0.35);
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+$shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+$transition-base: 400ms cubic-bezier(0.23, 1, 0.32, 1);
+$transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+// Z-Index Layers
+$zindex-0: 1;
+$zindex-1: 100;
+$zindex-2: 200;
+$zindex-3: 300;
+$zindex-4: 400;
+
+// Extra Brand Logic
+$primary-gradient: linear-gradient(135deg, $brand-orange 0%, #FF8C42 100%);
+$secondary-gradient: linear-gradient(135deg, $brand-purple 0%, #7E57C2 100%);
+$accent-gradient: linear-gradient(135deg, #FFD93D 0%, $brand-orange 100%);
+$highlight-color: #ffe388;
+$code-color: #d73a49;
+$link-color: $brand-orange;
+$link-color-dark: #da631e;
+$link-color-light: #f58c4d;

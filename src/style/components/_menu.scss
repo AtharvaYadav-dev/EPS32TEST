@@ -1,0 +1,72 @@
+// ============================================
+// 🎨 MODERN MENU STYLES
+// ============================================
+
+.menu-entry {
+    font-family: $font-body;
+    font-weight: 500;
+}
+
+.menu-panel-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $layout-spacing-sm $layout-spacing;
+    border-radius: $border-radius;
+    transition: all $transition-base;
+}
+
+.text-menu-item {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: $layout-spacing-sm;
+}
+
+.menu-panel-item .feather-icon-container {
+    vertical-align: middle;
+}
+
+.menu-item {
+    color: $gray-color-light;
+    transition: all $transition-base;
+}
+
+.menu .menu-item>.menu-entry {
+    border-radius: $border-radius;
+    color: inherit;
+    display: block;
+    margin: 0.1rem 0;
+    padding: $layout-spacing-sm $layout-spacing;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all $transition-base;
+
+    &:hover {
+        background: rgba(79, 70, 229, 0.1);
+        color: $secondary-color-light;
+        transform: translateX(4px);
+    }
+}
+
+.menu-container,
+.information-container {
+    @extend .glass-effect;
+    flex: 0 1 auto;
+    z-index: 10000;
+    border-radius: $border-radius-lg;
+    padding: $layout-spacing;
+    min-width: 200px;
+}
+
+.menu-item-panel {
+    pointer-events: none !important;
+}
+
+.panel .menu-item:active,
+.panel .menu-item.active {
+    background: $primary-gradient;
+    color: white;
+    box-shadow: $shadow-glow;
+    border-radius: $border-radius;
+}

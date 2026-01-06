@@ -1,0 +1,227 @@
+// ============================================
+// 🎨 PREMIUM ADVANCED THEME & ANIMATIONS
+// ============================================
+
+// Fallbacks for critical theme variables
+$primary-color: #F36F21 !default;
+$secondary-color: #5E35B1 !default;
+$primary-gradient: linear-gradient(135deg, #F36F21 0%, #FF8C42 100%) !default;
+$secondary-gradient: linear-gradient(135deg, #5E35B1 0%, #7E57C2 100%) !default;
+$accent-gradient: linear-gradient(135deg, #FFD93D 0%, #F36F21 100%) !default;
+$font-heading: 'Outfit', sans-serif !default;
+$transition-base: 400ms cubic-bezier(0.23, 1, 0.32, 1) !default;
+$border-radius-lg: 1.5rem !default;
+$border-radius-xl: 2rem !default;
+$border-radius-full: 9999px !default;
+$unit-2: 0.5rem !default;
+$unit-6: 1.5rem !default;
+$shadow-glow: 0 0 25px rgba(243, 111, 33, 0.35) !default;
+$body-bg: #020408 !default;
+
+// 1. Glassmorphism Utilities
+.glass-effect {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
+}
+
+.glass-card {
+  @extend .glass-effect;
+  border-radius: $border-radius-lg !important;
+}
+
+// 2. Modern Gradients
+.gradient-primary {
+  background: $primary-gradient !important;
+}
+
+.gradient-secondary {
+  background: $secondary-gradient !important;
+}
+
+.gradient-accent {
+  background: $accent-gradient !important;
+}
+
+// 3. Premium Buttons
+.btn-modern {
+  border-radius: $border-radius-full !important;
+  font-family: $font-heading !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  transition: all $transition-base !important;
+  padding: $unit-2 $unit-6 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: $unit-2 !important;
+  border: none !important;
+  cursor: pointer !important;
+
+  &:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: $shadow-glow;
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+}
+
+.btn-primary-modern {
+  @extend .btn-modern;
+  background: $primary-gradient !important;
+  color: white !important;
+}
+
+.btn-secondary-modern {
+  @extend .btn-modern;
+  background: $secondary-gradient !important;
+  color: white !important;
+}
+
+// 4. Animated Background Elements
+.modern-bg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  background: $body-bg;
+
+  .blob {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(243, 111, 33, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    animation: blobFloat 20s infinite alternate cubic-bezier(0.45, 0, 0.55, 1);
+
+    &.blob-2 {
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(94, 53, 177, 0.1) 0%, transparent 70%);
+      bottom: -100px;
+      right: -100px;
+      animation-duration: 25s;
+      animation-delay: -5s;
+    }
+  }
+}
+
+@keyframes blobFloat {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+
+  33% {
+    transform: translate(100px, 150px) rotate(120deg) scale(1.2);
+  }
+
+  66% {
+    transform: translate(-50px, 100px) rotate(240deg) scale(0.8);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(360deg) scale(1);
+  }
+}
+
+// 5. Entrance Animations
+.animate-fade-in {
+  animation: fadeIn 800ms $transition-base forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 600ms $transition-base forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-down {
+  animation: slideInDown 800ms $transition-base forwards;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// 6. Premium Loading Spinner
+.modern-loading-spinner {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: relative;
+  padding: 3px;
+  background: $primary-gradient;
+  mask: radial-gradient(closest-side, transparent 80%, black 100%);
+  -webkit-mask: radial-gradient(closest-side, transparent 80%, black 100%);
+  animation: spin 1.5s infinite linear;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $secondary-gradient;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: pulse 1.5s infinite alternate;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,384 @@
+// ============================================
+// 🎨 MODERN CONTROL ENHANCEMENTS
+// ============================================
+
+// Modern Button Overrides
+.btn {
+  font-family: $font-heading;
+  font-weight: 600;
+  border-radius: $border-radius;
+  transition: all $transition-base;
+  border: 1px solid transparent;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: $shadow;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.btn-primary {
+  background: $primary-gradient;
+  color: white;
+  border: none;
+  box-shadow: $shadow-glow;
+
+  &:hover {
+    box-shadow: $shadow-glow, $shadow-md;
+  }
+}
+
+.btn-success {
+  background: linear-gradient(135deg, $success-color 0%, darken($success-color, 10%) 100%);
+  color: white;
+  border: none;
+
+  &:hover {
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+  }
+}
+
+.btn-error,
+.emergency-btn {
+  background: linear-gradient(135deg, $error-color 0%, darken($error-color, 10%) 100%);
+  color: white !important;
+  border: none !important;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+
+  &:hover {
+    background: linear-gradient(135deg, lighten($error-color, 5%) 0%, $error-color 100%) !important;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+  }
+
+  &:active {
+    background: $error-color !important;
+  }
+}
+
+.btn-header {
+  background: rgba(79, 70, 229, 0.1);
+  color: $secondary-color;
+  border: 1px solid rgba(79, 70, 229, 0.3);
+
+  &:hover {
+    background: rgba(79, 70, 229, 0.2);
+  }
+}
+
+.mobile-view .btn-header,
+.btn-header:hover,
+.mobile-view .btn-close,
+.btn-close:hover {
+  color: white !important;
+  background: $primary-color !important;
+}
+
+// Modern Input Styles
+.form-input,
+.form-select,
+select.form-select,
+.form-input[type="text"] {
+  background: #0f172a !important; // Solid deep navy
+  border: 1.5px solid rgba(243, 111, 33, 0.4) !important; // Brand orange subtle border
+  border-radius: $border-radius-sm;
+  color: #ffffff !important; // Crystal white text
+  padding: $unit-2 $unit-3 !important;
+  font-weight: 500 !important;
+  transition: all $transition-base;
+  appearance: none;
+  -webkit-appearance: none;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color !important;
+    background: #1e293b !important;
+    box-shadow: 0 0 0 4px rgba(243, 111, 33, 0.15) !important;
+  }
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  option {
+    background: #0f172a;
+    color: #ffffff;
+    padding: $unit-2;
+  }
+}
+
+// Ensure icons within inputs are visible
+.has-icon-left .form-icon,
+.has-icon-right .form-icon {
+  color: $primary-color-light !important;
+  z-index: 2;
+}
+
+// Terminal Styling
+.terminal {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: $border-radius-lg;
+  color: $body-font-color;
+  font-family: $mono-font-family;
+
+  .echo {
+    color: $secondary-color;
+  }
+
+  .error {
+    color: $error-color;
+    font-weight: bolder;
+  }
+}
+
+// File List Styling
+.files-list {
+  background: rgba(15, 23, 42, 0.3);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: $border-radius-lg;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(79, 70, 229, 0.4);
+    border-radius: $border-radius-full;
+
+    &:hover {
+      background: rgba(79, 70, 229, 0.6);
+    }
+  }
+}
+
+.file-line {
+  &:hover {
+    color: $secondary-color;
+    background: rgba(79, 70, 229, 0.1);
+    border-radius: $border-radius;
+  }
+}
+
+.file-line-action:active {
+  color: $primary-color;
+  font-weight: bolder;
+}
+
+// Badge Styling
+.badge-container {
+  border: 2px solid $primary-color;
+  background: rgba(79, 70, 229, 0.1);
+  border-radius: $border-radius;
+}
+
+.badge-label {
+  color: $primary-color;
+  font-family: $font-heading;
+}
+
+// Comment Styling
+.comment {
+  background: rgba(79, 70, 229, 0.1);
+  color: $secondary-color;
+  border-left: 3px solid $primary-color;
+  padding-left: $layout-spacing;
+  border-radius: $border-radius;
+}
+
+// Notification Styling
+.notification-line {
+  transition: background $transition-base;
+  border-radius: $border-radius;
+
+  &:hover {
+    background: rgba(79, 70, 229, 0.1);
+  }
+}
+
+// Item Selection
+.item-selection-list {
+  transition: all $transition-base;
+  border-radius: $border-radius-lg;
+
+  &:hover {
+    background: rgba(79, 70, 229, 0.1);
+    transform: translateX(4px);
+  }
+}
+
+// Fieldset Styling
+.control-fieldset {
+  color: $body-font-color !important;
+  border-color: rgba(148, 163, 184, 0.2);
+}
+
+.field-group {
+  color: $secondary-color;
+  font-family: $font-heading;
+}
+
+// Drop Zone
+.drop-zone--over {
+  border-radius: $border-radius-lg;
+  background: linear-gradient(90deg, $primary-color 50%, transparent 50%),
+    linear-gradient(90deg, $primary-color 50%, transparent 50%),
+    linear-gradient(0deg, $primary-color 50%, transparent 50%),
+    linear-gradient(0deg, $primary-color 50%, transparent 50%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 15px 4px, 15px 4px, 4px 15px, 4px 15px;
+  animation: border-dance 4s infinite linear;
+}
+
+// Flat Button Radio
+.flatbtn {
+  label {
+    background: rgba(30, 41, 59, 0.5);
+    border-color: $primary-color;
+    color: $primary-color;
+    transition: all $transition-base;
+    border-radius: $border-radius;
+
+    &:hover {
+      background: rgba(79, 70, 229, 0.1);
+    }
+  }
+
+  input[type="radio"]:checked+label {
+    background: $primary-gradient;
+    color: white;
+    box-shadow: $shadow-glow;
+  }
+
+  input[type="radio"]:active+label {
+    background: $primary-color;
+    color: white;
+  }
+}
+
+// Nested Button
+.nested-button {
+  color: $secondary-color !important;
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+
+  &:hover {
+    background: rgba(6, 182, 212, 0.2);
+  }
+}
+
+// Clear/Reveal Icons
+.clearShortkey,
+.passwordReveal {
+  color: $gray-color;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+// Modified State Styling
+.has-modification {
+
+  .form-input,
+  .form-select {
+    background: rgba(245, 158, 11, 0.1);
+    border-color: $warning-color;
+  }
+
+  label,
+  .form-input-hint {
+    color: $warning-color;
+  }
+
+  svg {
+    color: $warning-color;
+    filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.4));
+  }
+}
+
+.has-error svg {
+  color: $error-color;
+  filter: drop-shadow(0 0 4px rgba(239, 68, 68, 0.4));
+}
+
+.has-success svg {
+  color: $success-color;
+  filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.4));
+}
+
+// Toast Notifications
+.toasts-container {
+  .toast {
+    background: rgba(30, 41, 59, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow-xl;
+    color: $body-font-color;
+
+    &.toast-success {
+      border-left: 4px solid $success-color;
+    }
+
+    &.toast-error {
+      border-left: 4px solid $error-color;
+    }
+
+    &.toast-warning {
+      border-left: 4px solid $warning-color;
+    }
+  }
+}
+
+// Range Input Styling
+input[type="range"] {
+  &::-webkit-slider-track {
+    background: rgba(148, 163, 184, 0.2);
+    border-radius: $border-radius-full;
+  }
+
+  &::-webkit-slider-thumb {
+    background: $primary-gradient;
+    box-shadow: $shadow-glow;
+  }
+
+  &::-moz-range-track {
+    background: rgba(148, 163, 184, 0.2);
+    border-radius: $border-radius-full;
+  }
+
+  &::-moz-range-thumb {
+    background: $primary-gradient;
+    box-shadow: $shadow-glow;
+  }
+}
+
+// Progress Bar
+.progress {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: $border-radius-full;
+
+  .progress-bar {
+    background: $primary-gradient;
+    box-shadow: $shadow-glow;
+  }
+}
+
+// Logo Styling
+.logo {
+  border-radius: $border-radius;
+  transition: all $transition-base;
+
+  &:hover {
+    box-shadow: $shadow-glow;
+    transform: scale(1.05);
+  }
+}
